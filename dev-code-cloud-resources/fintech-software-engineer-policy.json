@@ -11,7 +11,7 @@
 "Resource": "*"
 },
 {
-"Sid": "AllowProdDataAccessOnly",
+"Sid": "AllowDevCodeAccessOnly",
 "Effect": "Allow",
 "Action": [
 "s3:ListBucket",
@@ -19,8 +19,8 @@
 "s3:PutObject"
 ],
 "Resource": [
-"arn:aws:s3:::fintech-prod-data-mo",
-"arn:aws:s3:::fintech-prod-data-mo/*"
+"arn:aws:s3:::fintech-dev-code-mo",
+"arn:aws:s3:::fintech-dev-code-mo/*"
 ]
 }
 ]
