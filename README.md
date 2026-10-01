@@ -98,6 +98,9 @@ Design a clean access matrix using None, Read, or Read/Write for the following r
 
 ![screenshots](dev-code-cloud-resources/fintech-sarah-prod-data-s3bucket-denied-permission.png)
 
+- *Bob has permission to list all S3 buckets in the AWS account, he can view and upload objects in the fintech-prod-data-mo S3 bucket but he does not have permission to access the fintech-dev-code-mo S3 bucket. This access restriction is based on the Principle of Least Privilege (PoLP) and Separation of Duties (SoD) enforced through his group policy*
+
+
 
 
 
