@@ -1,11 +1,11 @@
-# The FinTech Labs - IAM Modernization Implementation 
-A comprehensive hands-on AWS IAM lab focused on designing, auditing, and securing an identity and access management framework for a growing technology company.
-
+# FinTech Labs: IAM Modernization Implementation 
+A hands-on AWS lab focused on designing, auditing, and securing an identity and access management framework for a growing fintech company.
 
 ## Why This Project Matters
 
-In a fintech environment, effective identity and access management is critical because employees, applications, services, and other workloads require controlled access to organizational resources. A well-designed AWS IAM framework helps establish who or what can access a resource, which actions they are permitted to perform, and under what conditions. This supports the principle of least privilege, reduces the risk of unauthorized access, and provides a structured way to manage permissions as the organization grows.
+In a fintech environment, effective identity and access management is critical because employees, applications, services, and workloads require controlled access to organizational resources.
 
+A well-designed AWS IAM framework establishes who or what can access a resource, which actions they are permitted to perform, and under what conditions. This supports the Principle of Least Privilege (PoLP), reduces the risk of unauthorized access, strengthens accountability, and provides a structured approach to managing permissions as the organization grows.
 
 ## The Scenario:
 FinTech Labs, a fast-growing financial technology startup, relies on a traditional on-premise "Castle-and-Moat" network security model in which security is largely based on protecting the organization's internal network perimeter where anyone inside the perimeter is trusted by default. 
