@@ -21,7 +21,9 @@ As the Lead IAM Security Engineer, design and implement a four-part IAM moderniz
 3. Alex: A customer service representative who handles support tickets.
 4. Lambda-Log-Processor: An AWS serverless function that scrapes audit logs every hour.
 
-- Task: Create a table listing each entity, identifying whether it is a Workforce Identity, Customer Identity, or Non-Human / Workload Identity, and defining its primary security risk if compromised.
+
+Create a table listing each entity, identifying whether it is a Workforce Identity, Customer Identity, or Non-Human / Workload Identity, and defining its primary security risk if compromised.
+
 
 **To categorize the different entities:**
 
@@ -33,16 +35,17 @@ As the Lead IAM Security Engineer, design and implement a four-part IAM moderniz
 | Lambda-Log-Processor | Non-Human / Workload Identity | An attacker could read sensitive audit data or other AWS resources available to its role, and if the role has write or delete permissions, it could erase evidence of their activities.
 
 ## Part 2: Designing a Least-Privilege Access Matrix (Authorization)
-- FinTech Labs has three primary sensitive resources:
-Res-Dev-Code (Source code repository)
-Res-Prod-Database (Customer financial records)
-Res-IAM-Console (Cloud administrative panel)
+FinTech Labs has three primary sensitive resources:
+- Res-Dev-Code (Source code repository)
+- Res-Prod-Database (Customer financial records)
+- Res-IAM-Console (Cloud administrative panel)
 The engineering team currently has full admin access to everything. You need to fix this using the Principle of Least Privilege (PoLP) and Separation of Duties (SoD).
 
-- Task: Design a clean access matrix using None, Read, or Read/Write for the following roles:
+Design a clean access matrix using None, Read, or Read/Write for the following roles:
+
 1. Software Engineer (Sarah)
 2. Database Administrator (Bob)
-3. DevOps Engineer (Dave)
+
 
 **Create two separate cloud resources as storage containers simulating the source code repo and the production databases using S3 buckets**
 
@@ -76,6 +79,13 @@ The engineering team currently has full admin access to everything. You need to 
 ![screenshots](dev-code-cloud-resources/fintech-software-engineer-user-group.png)
 
 - *database administrator users group with the necessary policy attached*
+
+![screenshots](dev-code-cloud-resources/fintech-database-admins-users-group.png)
+
+- *create users and add them to their respective groups*
+
+
+
 
 
 
