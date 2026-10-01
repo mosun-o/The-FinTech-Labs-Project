@@ -46,17 +46,61 @@ The engineering team currently has full admin access to everything. You need to 
 
 **Create two separate cloud resources as storage containers simulating the source code repo and the production databases using S3 buckets**
 
-- Create the Dev code S3 Bucket
+- *Create the Dev code S3 Bucket*
 
 ![screenshots](dev-code-cloud-resources/fintech-dev-code-s3.png)
 
-- Create the Prod Database S3 bucket
+- *Create the Prod Database S3 bucket*
 
 ![screenshots](dev-code-cloud-resources/fintech-dev-code-s3.png)
 
 - Write custom least-privilege JSON policies to enforce Separation of Duties (SoD), ensuring that developers cannot access production data resources and vice versa
 
-  
+- *Developer policy with permission to only the dev code s3 bucket*
+
+![screenshots](dev-code-cloud-resources/fintech-software-engineer-policy.png)
+
+```json
+{
+"Version": "2012-10-17",
+"Statement": [
+{
+"Sid": "AllowConsoleListing",
+"Effect": "Allow",
+"Action": [
+"s3:ListAllMyBuckets",
+"s3:GetBucketLocation"
+],
+"Resource": "*"
+},
+{
+"Sid": "AllowDevCodeAccessOnly",
+"Effect": "Allow",
+"Action": [
+"s3:ListBucket",
+"s3:GetObject",
+"s3:PutObject"
+],
+"Resource": [
+"arn:aws:s3:::fintech-dev-code-mo",
+"arn:aws:s3:::fintech-dev-code-mo/*"
+]
+}
+]
+}
+```
+
+- *Database administrator policy with permission to only the prod database s3 bucket*
+
+
+
+
+
+
+
+
+
+
 
 
 
