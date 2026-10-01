@@ -4,10 +4,10 @@ A comprehensive hands-on AWS IAM lab focused on designing, auditing, and securin
 
 ## Why This Project Matters
 
-In a fintech envirnment, effective identity and access management is critical because employees, applications, services, and other workloads require controlled access to organizational resources. A well-designed AWS IAM framework helps establish who or what can access a resource, which actions they are permitted to perform, and under what conditions. This supports the principle of least privilege, reduces the risk of unauthorized access, and provides a structured way to manage permissions as the organization grows.
+In a fintech environment, effective identity and access management is critical because employees, applications, services, and other workloads require controlled access to organizational resources. A well-designed AWS IAM framework helps establish who or what can access a resource, which actions they are permitted to perform, and under what conditions. This supports the principle of least privilege, reduces the risk of unauthorized access, and provides a structured way to manage permissions as the organization grows.
 
 
-## The Scenerio:
+## The Scenario:
 FinTech Labs, a fast-growing financial technology startup, relies on a traditional on-premise "Castle-and-Moat" network security model in which security is largely based on protecting the organization's internal network perimeter where anyone inside the perimeter is trusted by default. 
 
 Following a recent near-miss security incident where a developer's leaked password allowed an unauthorized script to touch customer records, executive leadership has mandated an immediate shift to an Identity-Centric, Zero Trust Security Model.
@@ -44,7 +44,7 @@ The engineering team currently has full admin access to everything. You need to 
 2. Database Administrator (Bob)
 3. DevOps Engineer (Dave)
 
-**Create two separate cloud resources as storage containers simulating code repos and production databases using S3 buckets**
+**Create two separate cloud resources as storage containers simulating the source code repo and the production databases using S3 buckets**
 
 - Create the Dev code S3 Bucket
 
@@ -52,9 +52,11 @@ The engineering team currently has full admin access to everything. You need to 
 
 - Create the Prod Database S3 bucket
 
+![screenshots](dev-code-cloud-resources/fintech-dev-code-s3.png)
 
+- Write custom least-privilege JSON policies to enforce Separation of Duties (SoD), ensuring that developers cannot access production data resources and vice versa
 
-
+  
 
 
 
