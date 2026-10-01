@@ -21,11 +21,8 @@ As the Lead IAM Security Engineer, design and implement a four-part IAM moderniz
 3. Alex: A customer service representative who handles support tickets.
 4. Lambda-Log-Processor: An AWS serverless function that scrapes audit logs every hour.
 
+**Categorizing the different entities**
 
-Create a table listing each entity, identifying whether it is a Workforce Identity, Customer Identity, or Non-Human / Workload Identity, and defining its primary security risk if compromised.
-
-
-**To categorize the different entities:**
 
 | **Entity** | **IAM Taxonomy** | **Primary Security Risk if Compromised** | 
 | ---------- | ------------ | -----    | 
@@ -34,20 +31,28 @@ Create a table listing each entity, identifying whether it is a Workforce Identi
 | Alex | 	Workforce Identity | An attacker could gain access to the customer support systems to perform unauthorized actions, steal customers information and use it for social engineering against customers
 | Lambda-Log-Processor | Non-Human / Workload Identity | An attacker could read sensitive audit data or other AWS resources available to its role, and if the role has write or delete permissions, it could erase evidence of their activities.
 
+
+
 ## Part 2: Designing a Least-Privilege Access Matrix (Authorization)
+
+
 FinTech Labs has three primary sensitive resources:
 - Res-Dev-Code (Source code repository)
 - Res-Prod-Database (Customer financial records)
 - Res-IAM-Console (Cloud administrative panel)
+
+
 The engineering team currently has full admin access to everything. You need to fix this using the Principle of Least Privilege (PoLP) and Separation of Duties (SoD).
 
-Design a clean access matrix using None, Read, or Read/Write for the following roles:
+
+Design an access matrix using None, Read, or Read/Write for the following roles to control access to sensitive FinTech Labs resources:
+
 
 1. Software Engineer (Sarah)
 2. Database Administrator (Bob)
 
 
-**Create two separate cloud resources as storage containers simulating the source code repo and the production databases using S3 buckets**
+**Create two separate cloud resources using S3 buckets as storage containers simulating the source code repo and the production databases**
 
 - *Create the Dev code S3 Bucket*
 
@@ -107,6 +112,7 @@ Design a clean access matrix using None, Read, or Read/Write for the following r
 ![screenshots](dev-code-cloud-resources/fintech-bob-dev-code-s3bucket-denied-permission.png)
 
 
+## Part 3: Incident Investigation & Audit Analysis (Accounting)
 
 
 
