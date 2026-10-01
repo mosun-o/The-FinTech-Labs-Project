@@ -54,7 +54,7 @@ The engineering team currently has full admin access to everything. You need to 
 
 ![screenshots](dev-code-cloud-resources/fintech-dev-code-s3.png)
 
-- **Write custom least-privilege JSON policies to enforce Separation of Duties (SoD), ensuring that developers cannot access production data resources and vice versa**
+- **Create custom least-privilege JSON policies to enforce Separation of Duties (SoD), ensuring that developers cannot access production data resources and vice versa**
 
 - *Developer policy with permission to only the dev code resources*
 
