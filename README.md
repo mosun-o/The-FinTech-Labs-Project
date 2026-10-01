@@ -90,7 +90,7 @@ Design a clean access matrix using None, Read, or Read/Write for the following r
 
 **Log in to the AWS Console using each user’s credentials to test and verify their assigned permissions and authorized activities**
 
-
+- *Sarah has permission to list all S3 buckets in the AWS account and to view and upload objects in the fintech-dev-code-mo S3 bucket*
 
 
 
