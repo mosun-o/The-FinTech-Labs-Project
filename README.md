@@ -60,6 +60,8 @@ The engineering team currently has full admin access to everything. You need to 
 
 ![screenshots](dev-code-cloud-resources/fintech-software-engineer-policy.png)
 
+[View the full JSON policy](dev-code-cloud-resources/fintech-software-engineer-policy.json)
+
 
 - *Database administrator policy with permission to only the prod resources*
 
