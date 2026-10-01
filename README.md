@@ -88,6 +88,10 @@ Design a clean access matrix using None, Read, or Read/Write for the following r
 
 ![screenshots](dev-code-cloud-resources/fintech-user-bob-dba.png)
 
+**Log in to the AWS Console using each user’s credentials to test and verify their assigned permissions and authorized activities**
+
+
+
 
 
 
