@@ -84,6 +84,10 @@ Design a clean access matrix using None, Read, or Read/Write for the following r
 
 - *create users and add them to their respective groups*
 
+![screenshots](dev-code-cloud-resources/fintech-user-sarah-dev.png)
+
+![screenshots](dev-code-cloud-resources/fintech-user-bob-dba.png)
+
 
 
 
