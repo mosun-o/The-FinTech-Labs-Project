@@ -1,0 +1,59 @@
+{
+"Version": "2012-10-17",
+"Statement": [
+{
+"Sid": "AllowConsoleListing",
+"Effect": "Allow",
+"Action": [
+"s3:ListAllMyBuckets",
+"s3:GetBucketLocation"
+],
+"Resource": "*"
+},
+{
+"Sid": "AllowDevCodeAccessOnly",
+"Effect": "Allow",
+"Action": [
+"s3:ListBucket",
+"s3:GetObject",
+"s3:PutObject"
+],
+"Resource": [
+"arn:aws:s3:::fintech-dev-code-<your-initials>",
+"arn:aws:s3:::fintech-dev-code-<your-initials>/*"
+]
+}
+]
+}
+
+1. Click Next, name the policy FinTech-SoftwareEngineer-Policy, and click Create policy.
+Policy B: Database Administrator Policy
+1. Click Create policy again, select JSON, and paste this policy. This grants Bob access only to production data metrics/backups, completely blocking him from development code:
+JSON
+{
+"Version": "2012-10-17",
+"Statement": [
+{
+"Sid": "AllowConsoleListing",
+"Effect": "Allow",
+"Action": [
+"s3:ListAllMyBuckets",
+"s3:GetBucketLocation"
+],
+"Resource": "*"
+},
+{
+"Sid": "AllowProdDataAccessOnly",
+"Effect": "Allow",
+"Action": [
+"s3:ListBucket",
+"s3:GetObject",
+"s3:PutObject"
+],
+"Resource": [
+"arn:aws:s3:::fintech-prod-data-mo",
+"arn:aws:s3:::fintech-prod-data-mo/*"
+]
+}
+]
+}
