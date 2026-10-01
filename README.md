@@ -54,7 +54,7 @@ The engineering team currently has full admin access to everything. You need to 
 
 ![screenshots](dev-code-cloud-resources/fintech-dev-code-s3.png)
 
-- Write custom least-privilege JSON policies to enforce Separation of Duties (SoD), ensuring that developers cannot access production data resources and vice versa
+- **Write custom least-privilege JSON policies to enforce Separation of Duties (SoD), ensuring that developers cannot access production data resources and vice versa**
 
 - *Developer policy with permission to only the dev code resources*
 
@@ -66,6 +66,11 @@ The engineering team currently has full admin access to everything. You need to 
 - *Database administrator policy with permission to only the prod resources*
 
 ![screenshots](dev-code-cloud-resources/Fintech-dba-policy.png)
+
+[view the full JSON policy](dev-code-cloud-resources/fintech-dba-policy.json)
+
+- **Create user groups and assign policies to the groups. Attaching policies to groups that users belong to so that they inherit all the permissions of that group, rather than attaching policies directly to individual users follows best practices**
+
 
 
 
