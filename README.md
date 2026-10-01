@@ -71,6 +71,15 @@ The engineering team currently has full admin access to everything. You need to 
 
 - **Create user groups and assign policies to the groups. Attaching policies to groups that users belong to so that they inherit all the permissions of that group, rather than attaching policies directly to individual users follows best practices**
 
+- *software engineers users group with the necessary policy attached*
+
+![screenshots](dev-code-cloud-resources/fintech-software-engineer-user-group.png)
+
+- *database administrator users group with the necessary policy attached*
+
+
+
+
 
 
 
