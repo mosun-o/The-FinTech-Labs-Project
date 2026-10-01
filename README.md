@@ -14,7 +14,7 @@ Following a recent near-miss security incident where a developer's leaked passwo
 
 As the Lead IAM Security Engineer, design and implement a four-part IAM modernization proposal and security audit based on an identity-centric Zero Trust security model to support the secure migration of workloads from on-premises infrastructure to AWS
 
-## Part 1: Identity Inventory & Taxonomy**
+## Part 1: Identity Inventory & Taxonomy
 - FinTech Labs has a mix of human and non-human users. Categorize the following entities into the correct IAM taxonomy buckets:
 1. Sarah: A software engineer who writes backend payment APIs.
 2. Payment-Gateway-API-Key: An automated token used by the server to talk to Stripe.
@@ -23,7 +23,7 @@ As the Lead IAM Security Engineer, design and implement a four-part IAM moderniz
 
 - Task: Create a table listing each entity, identifying whether it is a Workforce Identity, Customer Identity, or Non-Human / Workload Identity, and defining its primary security risk if compromised.
 
-**To categories the different entities:**
+**To categorize the different entities:**
 
 | **Entity** | **IAM Taxonomy** | **Primary Security Risk if Compromised** | 
 | ---------- | ------------ | -----    | 
@@ -32,7 +32,7 @@ As the Lead IAM Security Engineer, design and implement a four-part IAM moderniz
 | Alex | 	Workforce Identity | An attacker could gain access to the customer support systems to perform unauthorized actions, steal customers information and use it for social engineering against customers
 | Lambda-Log-Processor | Non-Human / Workload Identity | An attacker could read sensitive audit data or other AWS resources available to its role, and if the role has write or delete permissions, it could erase evidence of their activities.
 
-## Part 2: Designing a Least-Privilege Access Matrix (Authorization)**
+## Part 2: Designing a Least-Privilege Access Matrix (Authorization)
 - FinTech Labs has three primary sensitive resources:
 Res-Dev-Code (Source code repository)
 Res-Prod-Database (Customer financial records)
@@ -44,11 +44,13 @@ The engineering team currently has full admin access to everything. You need to 
 2. Database Administrator (Bob)
 3. DevOps Engineer (Dave)
 
-**Steps to create two separate cloud resources as storage containers to represent the development code repository and the production data warehouse**
+**Create two separate cloud resources as storage containers simulating code repos and production databases using S3 buckets**
+
 - Create the Dev code S3 Bucket
 
+![screenshots](dev-code-cloud-resources/fintech-dev-code-s3.png)
 
-
+- Create the Prod Database S3 bucket
 
 
 
