@@ -56,7 +56,7 @@ The engineering team currently has full admin access to everything. You need to 
 
 - Write custom least-privilege JSON policies to enforce Separation of Duties (SoD), ensuring that developers cannot access production data resources and vice versa
 
-- *Developer policy with permission to only the dev code s3 bucket*
+- *Developer policy with permission to only the dev code resources*
 
 ![screenshots](dev-code-cloud-resources/fintech-software-engineer-policy.png)
 
@@ -90,10 +90,39 @@ The engineering team currently has full admin access to everything. You need to 
 }
 ```
 
-- *Database administrator policy with permission to only the prod database s3 bucket*
+- *Database administrator policy with permission to only the prod resources*
 
+![screenshots](dev-code-cloud-resources/Fintech-dba-policy.png)
 
-
+```JSON
+{
+"Version": "2012-10-17",
+"Statement": [
+{
+"Sid": "AllowConsoleListing",
+"Effect": "Allow",
+"Action": [
+"s3:ListAllMyBuckets",
+"s3:GetBucketLocation"
+],
+"Resource": "*"
+},
+{
+"Sid": "AllowProdDataAccessOnly",
+"Effect": "Allow",
+"Action": [
+"s3:ListBucket",
+"s3:GetObject",
+"s3:PutObject"
+],
+"Resource": [
+"arn:aws:s3:::fintech-prod-data-mo",
+"arn:aws:s3:::fintech-prod-data-mo/*"
+]
+}
+]
+}
+```
 
 
 
